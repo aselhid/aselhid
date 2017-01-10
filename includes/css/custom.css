@@ -1,0 +1,16 @@
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+#introduction {
+	padding-top:10%;
+	background-color: #3A4750;
+	color: #EEEEEE;
+	height: 100vh;
+}
+
+footer {
+	background-color: #f2f2f2;
+    padding: 1.2em;
+}
