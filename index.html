@@ -4,39 +4,111 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Aselhid's</title>
-	<link rel="stylesheet" href="includes/css/bootstrap.min.css">
+	<link rel="stylesheet" href="includes/css/bootstrap.css">
 	<link rel="stylesheet" href="includes/css/custom.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro|Playfair+Display" rel="stylesheet">
 </head>
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Aselhid</a>
-	    </div>
-	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#introduction">Home</a></li>
-	      <li><a href="#about">About</a></li>
-	    </ul>
-	  </div>
-	</nav>
-	
-	<div class="jumbotron" id="introduction">
-		<div class="container">
-			<div id="stickman" class="col-sm-4">
-				<img class="img-responsive" src="includes/image/Stickman-hi.png" alt="">
-			</div>
-			<div class="col-sm-8">
-				<h1>Hi!</h1>
-				<p>What you're seeing right now is Asel Hidayat's homepage. <br>
-				Enjoy your stay.</p>
-			</div>
+	<div class="container-fluid centering" id="hi-section">
+		<img src="includes/image/Stickman-hi.png" id="stickman">
+		<div>
+			<h1>Hi!</h1>
+			<p>What you're seeing right now is Asel Hidayat's homepage.<br>Enjoy your stay.</p>
 		</div>
 	</div>
 
-	
-	<footer class=" container-fluid text-center"><p>Aselhid 2017.</p></footer>
+	<div class="container-fluid" id="introduction-section">
+		<div class="row">
+			<div class="col-md-3" id="introduction-photo"></div>
+			<div class="col-md-7" id="introduction-text">
+				<h4>
+					I was born in <br><span style="font-size:130%; color: #EEE000">Jakarta, September 23rd 1998.</span><br><br>
+					Even though i'm an <span style="font-size: 130%"><a data-toggle="tooltip" title="Extraverted • Sensing • Feeling • Perceiving">ESFP</a></span>, <br>i can be socially awkward at times.
+				</h4>
+			</div>
+			<div class="col-md-2 centering row-eq-height" id="introduction-title">
+				<h1>AB<br>OUT</h1>
+			</div>	
+		</div>
+	</div>
+
+	<div class="container-fluid" id="education-section">
+		<div class="centering"><h2>Education</h2></div>
+		<div class="row" id="school">
+			<div class="col-md-3">
+				<div class="hovereffect">
+	       			<div class="centering"><img src="includes/image/Angkasa4.png" alt="SD logo" class="education-logo img-circle"></div> 
+	        		<div class="overlay">
+           				<h2>SDS Angkasa 4</h2>
+           				<p>2004-2010</p>
+	        		</div>
+	    		</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="hovereffect">
+	       			<div class="centering"><img src="includes/image/109.png" alt="SMP logo" class="education-logo img-circle"></div> 
+	        		<div class="overlay">
+           				<h2>SMPN 109 Jakarta</h2>
+           				<p>2010-2013</p>
+	        		</div>
+	    		</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="hovereffect">
+	       			<div class="centering"><img src="includes/image/81.png" alt="SMA logo" class="education-logo img-circle"></div> 
+	        		<div class="overlay">
+           				<h2>SMAN 81 Jakarta</h2>
+           				<p>2013-2016</p>
+	        		</div>
+	    		</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="hovereffect">
+	       			<div class="centering"><img src="includes/image/UI.png" alt="Univ logo" class="education-logo img-circle"></div> 
+	        		<div class="overlay">
+           				<h2>Universitas Indonesia</h2>
+           				<p>2016-Now</p>
+	        		</div>
+	    		</div>
+			</div>
+		</div>
+
+		<div class="centering"><h2>Organization</h2></div>
+		<div class="centering">
+			<img src="includes/image/paskibra81.jpg" alt="Univ logo" class="education-logo img-circle centering">
+		</div>
+	</div>
+
+	<div class="container-fluid" id="skillset-section">
+		<div class="col-md-4">	
+			<h1>Skills</h1>
+			<h3>>>> Basic level</h3>
+			<p>Programming (Python, HTML, CSS)</p>
+			<h3>>>> Intermediate level</h3>
+			<p>Image editing with Photoshop</p>
+			<h3>>>> Expert level</h3>
+			<p>Paskibra related skills</p>
+			<h3>>>> Master level</h3>
+			<p>Dry jokes</p>
+		</div>
+		<div class="col-md-4">
+			<h1>Hobby</h1>
+			<p>Internet browsing<br>Being random<br>Riding motorcycles<br>Watching videos/movies<br>Reading comic<br>Chatting (RL/Line)</p>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(function(){
+    	$('[data-toggle="tooltip"]').tooltip(); 
+		});
+	</script>
 </body>
 </html>
