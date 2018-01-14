@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Coming Soon! | Hello World 2017</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:500,700|Raleway:600" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	</head>
+
+	<body>
+		<div class="parallax">
+			<div class="parallax__group section__one">
+				<div class="parallax__layer parallax__layer--base">
+					<div class="section__one--text">
+						<h1>coming<br>soon</h1>
+					</div>
+					<img src="./assets/images/Dots2.svg" class="section__one--dot2">
+				</div>
+				<div class="parallax__layer parallax__layer--middle">
+					<img src="./assets/images/Segitiga1.svg" class="section__one--tri1">
+				</div>
+				<div class="parallax__layer parallax__layer--back">
+					<img src="./assets/images/Dots1.svg" class="section__one--dot1">
+					<img class="section__one--rect" src="./assets/images/orange.svg">
+				</div>
+				<div class="parallax__layer parallax__layer--deep">
+					<img src="./assets/images/Garis3.svg" class="section__one--lin1">
+					<img src="./assets/images/Segitiga2.svg" class="section__one--tri2">
+				</div>
+				<div class="parallax__layer parallax__layer--deeper">
+					<img src="./assets/images/Lingkaran1.svg" class="section__one--cir1">
+				</div>
+			</div>
+			<div class="parallax__group section__two">
+				<div class="parallax__layer parallax__layer--base">
+					<div class="countdown-container" id="countdown">
+						<span class="days"></span>
+					    <span class="minutes"></span>
+					    <span class="seconds"></span>
+					</div>
+					<img src="./assets/images/Garis3.svg" class="section__two--lin2">
+				</div>
+				<div class="parallax__layer parallax__layer--middle">
+					<img src="./assets/images/Lingkaran1.svg" class="section__two--cir1">
+					<img src="./assets/images/Lingkaran2.svg" class="section__two--cir2">
+				</div>
+				<div class="parallax__layer parallax__layer--back">
+					<img src="./assets/images/Dots1.svg" class="section__one--dot1">
+					<img src="./assets/images/Wave1.svg" class="section__two--wav1">
+				</div>
+				<div class="parallax__layer parallax__layer--deep">
+					<img class="section__two--rect" src="./assets/images/biru.svg">
+				</div>
+				<div class="parallax__layer parallax__layer--deeper">
+					<img src="./assets/images/Dots2.svg" class="section__two--dot2">
+					<img src="./assets/images/Wave1.svg" class="section__two--wav2">
+				</div>
+				<div class="parallax__layer parallax__layer--deepest">
+					<img src="./assets/images/Garis3.svg" class="section__two--lin1">
+				</div>
+			</div>
+			<div class="parallax__group section__three">
+				<div class="parallax__layer parallax__layer--base">
+					<div class="section_three--text ik">ik</div>
+					<img src="./assets/images/Garis3.svg" class="section__three--lin1">
+					<img src="./assets/images/Dots2.svg" class="section__three--dot2">
+				</div>
+				<div class="parallax__layer parallax__layer--middle">
+					<div class="section_three--text ing">ing</div>
+					<img src="./assets/images/Segitiga1.svg" class="section__three--tri1">
+					<img src="./assets/images/Segitiga1.svg" class="section__three--tri2">
+				</div>
+				<div class="parallax__layer parallax__layer--back">
+					<div class="section_three--text gath">gath</div>
+					<img src="./assets/images/Dots1.svg" class="section__three--dot1">
+					<img src="./assets/images/Wave1.svg" class="section__three--wav1">
+				</div>
+				<div class="parallax__layer parallax__layer--deep">
+					<div class="section_three--text er">er</div>
+					<img src="./assets/images/Kotak1.svg" class="section__three--rec1">
+				</div>
+				<div class="parallax__layer parallax__layer--deeper">
+					<div class="section_three--text plus">+</div>
+					<img src="./assets/images/Lingkaran1.svg" class="section__three--cir1">
+					<img src="./assets/images/Lingkaran1.svg" class="section__three--cir2">
+				</div>
+				<div class="parallax__layer parallax__layer--deepest">
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function getTimeRemaining(endtime){
+			var t = Date.parse(endtime) - Date.parse(new Date());
+			var seconds = Math.floor((t / 1000) % 60);
+			var minutes = Math.floor((t / 1000 / 60) % 60);
+			var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+			var days = Math.floor(t/(1000 * 60 * 60 * 24));
+	
+			return {
+				'total': t,
+				'days': days,
+				'hours': hours,
+				'minutes': minutes,
+				'seconds': seconds
+			};
+		}
+		function initializeClock(id, endtime){
+			var clock = document.getElementById(id);
+			var daysSpan = clock.querySelector('.days');
+			var minutesSpan = clock.querySelector('.minutes');
+			var secondsSpan = clock.querySelector('.seconds');
+
+			function updateClock(){
+				var t = getTimeRemaining(endtime);
+
+				daysSpan.innerHTML = t.days + ((t.days > 1)? " days" : " day");
+			    minutesSpan.innerHTML = (t.minutes + t.hours * 60) + ((t.minutes + (t.hours * 60) > 1)? " mins" : " min");
+			    secondsSpan.innerHTML = t.seconds + ((t.seconds > 1)? " secs": " sec");
+
+				if(t.total <= 0){
+				  clearInterval(timeinterval);
+				}
+			}
+			updateClock();
+			var timeinterval = setInterval(updateClock,1000);
+		}
+		initializeClock('countdown', new Date("Sep 23, 2017 13:00:00"));
+	</script>
+
+</html>
